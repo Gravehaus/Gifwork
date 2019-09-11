@@ -13,7 +13,7 @@
 
 
 body{
-    background-image: url("images/persona5-bg.png");
+    background-image: url("assets/images/persona5-bg.png");
     background-size: 100%;
 }
 
@@ -22,7 +22,7 @@ body{
     background-color: rgb(168, 0, 0, 0.3);
     text-align: center;
     border: 5px solid black;
-    background-image: url("images/ezgif.com-video-to-gif.gif");
+    background-image: url("assets/images/ezgif.com-video-to-gif.gif");
     background-position-x: center;
     background-repeat: no-repeat;
 }
@@ -82,6 +82,12 @@ a.navbar-brand{
     background-color: rgb(168, 0, 0, 0.6);
     color: white;
     border: 1px solid white;
+}
+
+.myCard{
+    background-color: rgba(56, 56, 56, 0.3);
+    margin: 2% 0 2% 0;
+    width: 80%;
 }
 
 
