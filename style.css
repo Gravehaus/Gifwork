@@ -1,0 +1,103 @@
+*{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    
+}
+
+.container{
+    width: 65%;
+    padding-top: 1em;
+    
+}
+
+
+body{
+    background-image: url("images/persona5-bg.png");
+    background-size: 100%;
+}
+
+.jumbotron
+{
+    background-color: rgb(168, 0, 0, 0.3);
+    text-align: center;
+    border: 5px solid black;
+    background-image: url("images/ezgif.com-video-to-gif.gif");
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+
+.row{
+margin: 0;
+margin-bottom: 5%;
+border: 5px solid black;
+background-color: rgb(168, 0, 0, 0.3);
+}
+
+.navbar{
+    background-color: rgb(168, 0, 0, 0.3);
+    color: antiquewhite;
+    margin-bottom: 2%;
+    border: 5px solid black; 
+}
+
+.navbar-brand,
+a.navbar-brand{
+    color: antiquewhite;
+    font-size: 10px;
+    padding: 0px 0px  0px;
+    margin-bottom: -15px;
+}
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    background-color:black;
+  }
+  .jumbotron video {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width:100%;
+    height:100%;
+    /*  object-fit is not supported on IE  */
+    object-fit: cover;
+    opacity:0.5;
+  }
+  .jumbotron .container {
+    z-index: 2;
+    position: relative;
+  }
+
+  .display-4{
+      text-emphasis: dot skip inherit 0;
+  }
+  .footer{
+    margin-bottom: -6%;
+}
+
+.btn{
+    margin-right: 1%;
+    background-color: rgb(168, 0, 0, 0.6);
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
