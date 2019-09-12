@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function(){
 
   $("button").on("click", function () {
@@ -91,7 +94,14 @@ renderButtons();
 $(document).on("click", "#input", rpgImage);
 $(document).on("click", ".gif", imageUrl);
 });
- 
- 
 
-  
+var Button = function () {
+    $("#buttonArea").empty();
+    for (let i = 0; i < topics.length; i++) {
+        // button = $("<button type=" + "button" + ">" + topics[i] + "<button>").addClass("btn btn-warning").attr("data", topics[i]);d
+        var a = $("<button>");
+        a.addClass("buttonsTop");
+        a.attr("data-type", topics[i]);
+        a.text(topics[i]);
+        $("#buttonArea").append(a);
+    }}
