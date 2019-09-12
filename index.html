@@ -19,10 +19,14 @@
 
 <div class="container">
   <nav class="navbar form-inline ">
-      <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Add your game..."" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+  
+    
+ <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Add your game..." aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+       
+        </form> 
+
     <div id="buttons">
 
       <button data-person="kingdom hearts">
@@ -67,13 +71,20 @@
 
 
   </div>
-  <div class="col-9 container">
+  <div class="col-md-12 container">
     <div id="gifs-appear-here">
 
 
     </div>
   </div>
-  
+  <nav class="navbar footer ">
+
+      <a class="navbar-brand mx-auto " href="#"><img src="assets/images/midna.png" width="40" height="40"
+          class="d-inline-block align-top" alt="midna">
+        
+        <!--ML-AUTO ALIGNS TO THE RIGHT. JESUS.-->
+    
+    </nav>
 
 
   <!--PANEL BODY-->
@@ -92,14 +103,7 @@
 <!--GIF CONTAINER END-->
 
 
-<nav class="navbar footer ">
 
-  <a class="navbar-brand mx-auto " href="#"><img src="assets/images/midna.png" width="40" height="40"
-      class="d-inline-block align-top" alt="midna">
-    <p>JG 2019</p>
-    <!--ML-AUTO ALIGNS TO THE RIGHT. JESUS.-->
-
-</nav>
 <!---THIS IS THE FOOTER!-->
 </div>
 
@@ -132,6 +136,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
+
+$(document).ready(function(){
 
   $("button").on("click", function () {
 
@@ -208,7 +214,22 @@
 
   });
 
+  $("#submitPress").on("click", function(){
 
+var input = $("#user-input").val().trim();
+form.reset();
+displayedButtons.push(input);
+        
+renderButtons();
+
+return false;
+})
+
+renderButtons();
+
+$(document).on("click", "#input", rpgImage);
+$(document).on("click", ".gif", imageUrl);
+});
   /*
   */
  

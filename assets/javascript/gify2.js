@@ -1,74 +1,93 @@
-$("button").on("click", function () {
+$(document).ready(function(){
 
-  var person = $(this).attr("data-person");
+  $("button").on("click", function () {
 
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+    var person = $(this).attr("data-person");
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-    .then(function (response) {
-      var results = response.data;
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+      person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
-      for (var i = 0; i < results.length; i++) {
-        var gifDiv = $("<div>");
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+      .then(function (response) {
+        var results = response.data;
 
-        var rating = results[i].rating;
+        for (var i = 0; i < results.length; i++) {
+          var gifDiv = $("<div>");
 
-        var p = $("<p>").text("Rating: " + rating);
+          var rating = results[i].rating;
 
-        var personImage = $("<img>");
-        personImage.attr("src", results[i].images.fixed_height.url);
+          var p = $("<p>").text("Rating: " + rating);
 
-        gifDiv.prepend(p);
-        gifDiv.prepend(personImage);
+          var personImage = $("<img>");
+          personImage.attr("src", results[i].images.fixed_height.url);
 
-        $("#gifs-appear-here").prepend(gifDiv);
-      }
-    });
-});
+          gifDiv.prepend(p);
+          gifDiv.prepend(personImage);
 
-
-$("button").on("click", function () {
-
+          $("#gifs-appear-here").prepend(gifDiv);
+        }
+      });
+  });
 
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-
-    .then(function (response) {
-
-      var imageUrl = response.data.image_original_url;
-
-      var rpgImage = $("<img>");
+  $("button").on("click", function () {
 
 
-      rpgImage.attr("src", imageUrl);
-      rpgImage.attr("alt", "rpgImage");
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+
+      .then(function (response) {
+
+        var imageUrl = response.data.image_original_url;
+
+        var rpgImage = $("<img>");
 
 
-      $("#images").prepend(rpgImage);
-    });
-});
+        rpgImage.attr("src", imageUrl);
+        rpgImage.attr("alt", "rpgImage");
 
-$("button").on("click", function () {
 
-  var state = $(this).attr("data-state");
-  console.log(state);
+        $("#images").prepend(rpgImage);
+      });
+  });
 
-  if (state === 'still') {
-    var animatedSrc = $(this).attr("data-animate");
-    $(this).attr("src", animatedSrc);
-    $(this).attr("data-state", "animate");
+  $("button").on("click", function () {
 
-  } else {
-    var stillSrc = $(this).attr("data-still");
-    $(this).attr("src", stillSrc);
-    $(this).attr("data-state", "still");
-  }
+    var state = $(this).attr("data-state");
+    console.log(state);
 
+    if (state === 'still') {
+      var animatedSrc = $(this).attr("data-animate");
+      $(this).attr("src", animatedSrc);
+      $(this).attr("data-state", "animate");
+
+    } else {
+      var stillSrc = $(this).attr("data-still");
+      $(this).attr("src", stillSrc);
+      $(this).attr("data-state", "still");
+    }
+
+  });
+
+  $("#submitPress").on("click", function(){
+
+var input = $("#user-input").val().trim();
+form.reset();
+displayedButtons.push(input);
+        
+renderButtons();
+
+return false;
+})
+
+renderButtons();
+
+$(document).on("click", "#input", displayImg);
+$(document).on("click", ".gif", imageChangeState);
 });

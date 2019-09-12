@@ -16,6 +16,14 @@ body{
     background-size: 100%;
 }
 
+img{
+    margin-bottom: 10px;
+    vertical-align: middle;
+    border-style: solid;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
 .jumbotron
 {
     background-color: rgb(168, 0, 0, 0.3);
@@ -29,7 +37,7 @@ body{
 
 
 .row {
-    width: 65%;
+width: 65%;
 margin: 0;
 margin-bottom: 3%;
 align-content: center;
@@ -57,9 +65,11 @@ p {
     margin-bottom: 5%;
     background-color: rgb(168, 0, 0, 0.3);
     border: black 2px solid;
-   max-height: 100%;
-   text-align: center;
+    max-height: 100%;
+    text-align: center;
 }
+
+
 
 .navbar-brand,
 a.navbar-brand{
@@ -67,12 +77,12 @@ a.navbar-brand{
     font-size: 10px;
     margin-bottom: -15px;
 }
-button{
+button, .btn{
     display: inline;
     border-radius: 10px;
     color: white;
     background-color: rgba(41, 41, 41, 0.3);
-    
+   
 }
 
 .jumbotron {
@@ -84,6 +94,7 @@ button{
   }
   .footer{
     margin-bottom: -6%;
+    background-position-y: 2%;
 }
 
 
