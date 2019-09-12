@@ -1,102 +1,74 @@
+$("button").on("click", function () {
 
-  
-  
-  /*$("button").on("click", function() {
+  var person = $(this).attr("data-person");
 
-    var person = $(this).attr("data-person");
-  
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+    person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      .then(function(response) {
-        var results = response.data;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+    .then(function (response) {
+      var results = response.data;
 
-        for (var i = 0; i < results.length; i++) {
-          var gifDiv = $("<div>");
+      for (var i = 0; i < results.length; i++) {
+        var gifDiv = $("<div>");
 
-          var rating = results[i].rating;
+        var rating = results[i].rating;
 
-          var p = $("<p>").text("Rating: " + rating);
+        var p = $("<p>").text("Rating: " + rating);
 
-          var personImage = $("<img>");
-          personImage.attr("src", results[i].images.fixed_height.url);
+        var personImage = $("<img>");
+        personImage.attr("src", results[i].images.fixed_height.url);
 
-          gifDiv.prepend(p);
-          gifDiv.prepend(personImage);
+        gifDiv.prepend(p);
+        gifDiv.prepend(personImage);
 
-          $("#gifs-appear-here").prepend(gifDiv);
-        }
-      });
-  });
+        $("#gifs-appear-here").prepend(gifDiv);
+      }
+    });
+});
 
-  $(".gif").on("click", function() {
 
-    var state = $(this).attr("data-state");
-    console.log(state);
+$("button").on("click", function () {
 
-    if(state === 'still'){
-     var animatedSrc = $(this).attr("data-animate");
-     $(this).attr("src",animatedSrc);
-     $(this).attr("data-state","animate");
 
-    } else {
-      var stillSrc = $(this).attr("data-still");
-      $(this).attr("src",stillSrc);
-      $(this).attr("data-state","still");
-    }
 
-  });
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
 
-  $("button").on("click", function() {
+    .then(function (response) {
 
-    var person = $(this).attr("data-person");
+      var imageUrl = response.data.image_original_url;
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      person + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+      var rpgImage = $("<img>");
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      .then(function(response) {
-        var results = response.data;
 
-        for (var i = 0; i < results.length; i++) {
-          var gifDiv = $("<div>");
+      rpgImage.attr("src", imageUrl);
+      rpgImage.attr("alt", "rpgImage");
 
-          var rating = results[i].rating;
 
-          var p = $("<p>").text("Rating: " + rating);
+      $("#images").prepend(rpgImage);
+    });
+});
 
-          var personImage = $("<img>");
-          personImage.attr("src", results[i].images.fixed_height.url);
+$("button").on("click", function () {
 
-          gifDiv.prepend(p);
-          gifDiv.prepend(personImage);
+  var state = $(this).attr("data-state");
+  console.log(state);
 
-          $("#gifs-appear-here").prepend(gifDiv);
-        }
-      });
-  });
+  if (state === 'still') {
+    var animatedSrc = $(this).attr("data-animate");
+    $(this).attr("src", animatedSrc);
+    $(this).attr("data-state", "animate");
 
-  $(".gif").on("click", function() {
-   
-    var state = $(this).attr("data-state");
-    console.log(state);
+  } else {
+    var stillSrc = $(this).attr("data-still");
+    $(this).attr("src", stillSrc);
+    $(this).attr("data-state", "still");
+  }
 
-    if(state === 'still'){
-     var animatedSrc = $(this).attr("data-animate");
-     $(this).attr("src",animatedSrc);
-     $(this).attr("data-state","animate");
-
-    } else {
-      var stillSrc = $(this).attr("data-still");
-      $(this).attr("src",stillSrc);
-      $(this).attr("data-state","still");
-    }
-
-  }); */
+});

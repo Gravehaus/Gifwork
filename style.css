@@ -32,7 +32,7 @@ body{
     width: 65%;
 margin: 0;
 margin-bottom: 3%;
-
+align-content: center;
 background-color: rgb(168, 0, 0, 0.3);
 }
 
@@ -49,19 +49,18 @@ p {
     margin-bottom: 1rem;
     border: solid black 1px;
     width: 10%;
-    text-align: center;
-
+    margin-left: 45%;
 }
 
-.img{
-    width: 200px;
-}
+
+
 
 #gifs-appear-here{
     margin-bottom: 5%;
     background-color: rgb(168, 0, 0, 0.3);
     border: black 2px solid;
    max-height: 100%;
+   text-align: center;
 }
 
 .navbar-brand,
