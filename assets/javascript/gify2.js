@@ -88,6 +88,10 @@ return false;
 
 renderButtons();
 
-$(document).on("click", "#input", displayImg);
-$(document).on("click", ".gif", imageChangeState);
+$(document).on("click", "#input", rpgImage);
+$(document).on("click", ".gif", imageUrl);
 });
+ 
+ 
+
+  
