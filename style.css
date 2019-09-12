@@ -8,6 +8,9 @@
 .container{
     width: 65%;
     padding-top: 1em; 
+    background-color: rgb(168, 0, 0, 0.3);
+    background-size: 100%;
+    border: 5px solid black;
 }
 
 
@@ -27,7 +30,7 @@ body{
 }
 
 
-.row{
+.row {
 margin: 0;
 margin-bottom: 3%;
 border: 5px solid black;
@@ -48,8 +51,12 @@ a.navbar-brand{
     padding: 0px 0px  0px;
     margin-bottom: -15px;
 }
-#button-container{
+#button{
     display: inline;
+    margin-right: 1%;
+    background-color: rgb(168, 0, 0, 0.6);
+    color: white;
+    border: 1px solid white;
 }
 
 .jumbotron {
@@ -57,26 +64,13 @@ a.navbar-brand{
     overflow: hidden;
     background-color:black;
   
-   
-  
   
   }
   .footer{
     margin-bottom: -6%;
 }
 
-.btn{
-    margin-right: 1%;
-    background-color: rgb(168, 0, 0, 0.6);
-    color: white;
-    border: 1px solid white;
-}
 
-.myCard{
-    background-color: rgba(56, 56, 56, 0.6);
-    margin: 2% 0 2% 0;
-   
-}
 
 .card-footer{
     margin-bottom: 10px;
