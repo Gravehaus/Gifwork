@@ -9,3 +9,6 @@ Par the course, this is a video game- gif generator and the buttons a user press
 If anything, it should be aesthetically pleasing.
 
 -JG
+
+
+(At a later date, I'll like change my viewer into a locked-scroll rather than having the entirety having to be scrolled down.)
