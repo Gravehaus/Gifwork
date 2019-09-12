@@ -37,25 +37,16 @@ $(document).ready(function(){
 
 
   $("button").on("click", function () {
-
-
-
     $.ajax({
       url: queryURL,
       method: "GET"
     })
 
       .then(function (response) {
-
         var imageUrl = response.data.image_original_url;
-
         var rpgImage = $("<img>");
-
-
         rpgImage.attr("src", imageUrl);
         rpgImage.attr("alt", "rpgImage");
-
-
         $("#images").prepend(rpgImage);
       });
   });
